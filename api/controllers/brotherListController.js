@@ -1,12 +1,18 @@
 var brother = require('../models/brotherListModel');
 var mysql = require('mysql');
 
+const dbHostName = kgotawsdatabase.cvvvgjkf3mzt.us-east-2.rds.amazonaws.com;
+const dbPort = 3306;
+const dbUsername = "kgotweb";
+const dbPassword = "Spartan117!";
+const dbName = "otbrother";
+
 var con = mysql.createConnection({
-	host: "kgotawsdatabase.cvvvgjkf3mzt.us-east-2.rds.amazonaws.com",
-	port: 3306,
-	user: "kgotweb",
-	password: "Spartan117!",
-	database: "otbrother"
+	host: dbHostName,
+	port: dbPort,
+	user: dbUsername,
+	password: dbPassword,
+	database: dbName
 })
 
 con.connect(function(err) {
